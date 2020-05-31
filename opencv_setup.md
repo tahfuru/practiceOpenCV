@@ -160,5 +160,6 @@ cv2.waitKey(0)
 >> dog_test_result                               // 同じフォルダ内にdog_test_result.jpgとして結果を出力
 ```
 
+これで完成！
 
 
