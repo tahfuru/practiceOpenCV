@@ -7,8 +7,8 @@
 
 ## 環境構築
 1. 前提\
-  homebrewをインストール済み\
-  python3をインストール済み
+  homebrewをインストール済み(インストールしていない方はこちらを参考にすると良いでしょう https://qiita.com/zaburo/items/29fe23c1ceb6056109fd)
+  python3をインストール済み(インストールしていない方はこちらを参考にすると良いでしょう https://qiita.com/7110/items/1aa5968022373e99ae28)
 
 2. 準備\
 OpenCVはver.3を利用する。\
@@ -153,7 +153,7 @@ cv2.waitKey(0)
 ## 実験
 `practicePython/src`に移動して先ほど作成したプログラム`dogDetector.py`を実行
 ```
-ζ python3 dogDetector.python3                   // この行を実行
+ζ python3 dogDetector.python3                    // この行を実行
 読み込む画像のパス（相対or絶対）
 >> ./dog_test.jpg                                // 実験してみたい画像のパス
 生成後画像の名前（拡張子なし）
