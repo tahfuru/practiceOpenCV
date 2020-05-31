@@ -1,10 +1,10 @@
 import cv2
 
 # 入力画像の読み込み
-img = cv2.imread("../img/IMG_0846.JPG")
+img = cv2.imread("./sample.png")
 
 # カスケード型識別器の読み込み
-cascade = cv2.CascadeClassifier("/usr/local/Cellar/opencv/4.3.0/share/opencv4/haarcascades/haarcascade_frontalface_default.xml")
+cascade = cv2.CascadeClassifier("/usr/local/Cellar/opencv@3/3.4.10_2/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml")
 
 # グレースケール変換(グレースケールを使用すると、高速に顔検出できるらしい)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

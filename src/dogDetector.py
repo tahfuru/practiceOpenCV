@@ -12,7 +12,7 @@ outputImg = input('>> ')
 img = cv2.imread(inputImg)
 
 # カスケード型識別器（自作した分類器）
-cascade = cv2.CascadeClassifier('/Users/takayafuruta/Documents/practicePython/cascade/cascade.xml')
+cascade = cv2.CascadeClassifier('/Users/takayafuruta/Documents/practiceOpenCV/cascade/cascade.xml')
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 

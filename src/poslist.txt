@@ -28,3 +28,13 @@
 ../positiveImg/0028.jpg 1 0 0 297 297
 ../positiveImg/0029.jpg 1 0 0 297 297
 ../positiveImg/0030.jpg 1 0 0 297 297
+../positiveImg/0031.jpg 1 0 0 3668 3310
+../positiveImg/0032.png 1 0 0 730 796
+../positiveImg/0033.png 1 0 0 782 1002
+../positiveImg/0034.png 1 0 0 750 828
+../positiveImg/0035.png 1 0 0 996 1036
+../positiveImg/0036.png 1 0 0 660 728
+../positiveImg/0037.jpg 1 0 0 650 609
+../positiveImg/0038.jpg 1 0 0 650 650
+../positiveImg/0039.jpg 1 0 0 540 445
+../positiveImg/0040.png 1 0 0 518 746
