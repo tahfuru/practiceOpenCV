@@ -41,7 +41,7 @@ practicePython
 [DIR]  - negativeImg
 [DIR]  - positiveImg
 [DIR]  - src
-[Dir]  - vec
+[DIR]  - vec
        - opencv_createsamples
        - opencv_traincascade
 ```
@@ -52,12 +52,13 @@ practicePython
 
 1. 正例画像の準備\
 正例画像は先ほど作成した`positiveImg`に保存する。\
-保存した画像のどこに認識させたいものがあるのかを指示する`poslist.txt`を`practicePython/src`に作成する。\
+保存した画像のどこに認識させたいものがあるのかを指示する`poslist.txt`を`practicePython/src`に作成する。
 
 書き方は
 ```
-{ファイルのパス} {認識するもののの個数} {}
+{ファイルのパス} {認識するもののの個数} x1 y1 w1 h1 x2 y2 w2 h2 ...
 ```
+xi, yi, wi, hi...はi番目の対象オブジェクトの矩形表現である。(xi, yi)が矩形の左上の点を指定し、(wi, hi)でその矩形の幅と高さを指定\
 ここではこのように相対パスを利用して記述。\
 認識するものの場所をいちいち指示するのは大変なので、あらかじめ300×300くらいの大きさに拡大・トリミングした画像を利用する。
 ```
@@ -71,15 +72,13 @@ practicePython
 ```
 
 2. 負例画像の準備\
-負例画像は先ほど作成した`negativeImg`に保存する。\
-一緒に負例画像の一覧ファイルを作成
-```
-画像の絶対パス
-```
+負例画像は先ほど作成した`negativeImg`に保存する\
+一緒に負例画像の一覧ファイルを作成\
+一覧ファイルには負例画像の絶対パスを記述するだけ\
 
 ## 正例のベクトルファイルの生成
 `opencv_createsamples`を使う\
-最初に作成した作業ディレクトリ`practicePython`に移動して以下のコマンドを実行
+最初に作成した作業ディレクトリ`practicePython`に移動して以下のコマンドを実行\
 ```./opencv_createsamples -info src/poslist.txt -vec vec/positive.vec -num 30```
 
 オプションを下に示す
@@ -93,7 +92,7 @@ practicePython
 
 ## 識別器の生成
 `opencv_traincascade`を使う\
-最初に作成した作業ディレクトリ`practicePython`に移動して以下のコマンドを実行
+最初に作成した作業ディレクトリ`practicePython`に移動して以下のコマンドを実行\
 ```./opencv_traincascade -data cascade -vec vec/positive.vec -bg negativeImg/neglist.txt -numPos 30 -numNeg 30```
 
 必須パラメータを以下に示す
@@ -152,7 +151,7 @@ cv2.waitKey(0)
 ```
 
 ## 実験
-`practicePython/src`に移動して先ほど作成したプログラム`dogDetector.py`を実行\
+`practicePython/src`に移動して先ほど作成したプログラム`dogDetector.py`を実行
 ```
 ζ python3 dogDetector.python3                   // この行を実行
 読み込む画像のパス（相対or絶対）
@@ -160,5 +159,6 @@ cv2.waitKey(0)
 生成後画像の名前（拡張子なし）
 >> dog_test_result                               // 同じフォルダ内にdog_test_result.jpgとして結果を出力
 ```
+
 
 
