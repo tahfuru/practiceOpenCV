@@ -7,7 +7,7 @@
 
 ## 環境構築
 1. 前提\
-  homebrewをインストール済み(インストールしていない方はこちらを参考にすると良いでしょう https://qiita.com/zaburo/items/29fe23c1ceb6056109fd)\
+  homebrewをインストール済み(インストールしていない方はこちらを参考にすると良いでしょう https://qiita.com/zaburo/items/29fe23c1ceb6056109fd) \
   python3をインストール済み(インストールしていない方はこちらを参考にすると良いでしょう https://qiita.com/7110/items/1aa5968022373e99ae28)
 
 2. 準備\
